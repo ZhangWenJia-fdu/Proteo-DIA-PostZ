@@ -1,0 +1,8 @@
+args <- commandArgs(trailingOnly = FALSE)
+file_arg <- grep('^--file=', args, value = TRUE)
+root <- if (length(file_arg) > 0) dirname(normalizePath(sub('^--file=', '', file_arg[1]), winslash = '/', mustWork = TRUE)) else getwd()
+portable_lib <- file.path(root, 'portable', 'Rlibs')
+Sys.setenv(R_LIBS_USER = portable_lib)
+.libPaths(unique(c(portable_lib, file.path(R.home('home'), 'library'))))
+setwd(file.path(root, 'app'))
+shiny::runApp('.', launch.browser = FALSE, host = '127.0.0.1', port = 3840)

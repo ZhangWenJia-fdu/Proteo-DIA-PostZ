@@ -1,0 +1,50 @@
+# Packaged/runtime dependencies kept outside Git
+portable/
+portable/R-*/
+portable/Rlibs/
+Rlibs/
+
+# Built packages and launchers
+package/
+*.zip
+*.exe
+*.msi
+*.dll
+*.pdb
+
+# Generated analysis outputs and previews
+outputs/
+**/outputs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.pid
+*.Rout
+Rplots.pdf
+*_preview.png
+
+# R/session caches
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/staging/
+packrat/lib*/
+packrat/src/
+
+# App/runtime caches
+cache/
+.cache/
+tmp/
+temp/
+logs/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+~$*
+*.swp
+*.swo
